@@ -19,7 +19,7 @@ We welcome contributions from the community! If you're interested in contributin
 
 ## Contact Us
 
-For inquiries or support assistance, please contact our team at support@techcareafrica.com.
+For inquiries or support assistance, please contact our team lead at isaaczachary18@gmail.com
 
 ## License
 
