@@ -24,7 +24,7 @@ ___
 * Clone this repository:
 
 ```
-$ git clone https://github.com/soloamilkar/helpdesk
+$ git clone https://github.com/IsaacZachary/TechCareAfrica.git
 ```
 
 * Install requirements.txt within your virtual environment.
