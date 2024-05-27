@@ -1,0 +1,168 @@
+{% extends 'helpdesk/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+
+{% if user.rol.is_agent %}
+<!-- [ navigation menu ] start -->
+{% include 'helpdesk/navbar_agent.html' %}
+<!-- [ navigation menu ] end -->
+{% else %}
+<!-- [ navigation menu ] start -->
+{% include 'helpdesk/navbar.html' %}
+<!-- [ navigation menu ] end -->
+{% endif %}
+
+
+<!-- [ Header ] start -->
+{% include 'helpdesk/header.html' %}
+<!-- [ Header ] end -->
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+	<div class="pcoded-wrapper">
+		<div class="pcoded-content">
+			<div class="pcoded-inner-content">
+				<div class="main-body">
+					<div class="page-wrapper">
+						<!-- [ Main Content ] start -->
+						<div class="row">
+							<!-- [ sample-page ] start -->
+							<div class="col-sm-12">
+								<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+									<li class="nav-item">
+										<a class="nav-link active" id="pills-home-tab" data-toggle="pill"
+											href="#pills-home" role="tab" aria-controls="pills-home"
+											aria-selected="true">Introducción al proyecto</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" id="pills-profile-tab" data-toggle="pill"
+											href="#pills-profile" role="tab" aria-controls="pills-profile"
+											aria-selected="false">Sitemap</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" id="pills-contact-tab" data-toggle="pill"
+											href="#pills-contact" role="tab" aria-controls="pills-contact"
+											aria-selected="false">Contacto</a>
+									</li>
+								</ul>
+								<div class="tab-content" id="pills-tabContent">
+									<div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+										aria-labelledby="pills-home-tab">
+										<p class="mb-0">
+											Mi versión a pequeña escala de un sistema Helpdesk para subir issues por
+											medio de tickets. Este es mi segundo proyecto, y fue muchísimo más
+											"relax" que mi primer proyecto deployed. Aquí desarrollé un sistema
+											simple que trata de asemejar algunas de las principales características
+											de un sistema a escala empresarial. Apliqué muchísimo de lo que aprendí
+											desarrollando mi portfolio website, por ejemplo: estructurar el proyecto
+											desde el principio hasta el final antes de escribir una línea de código
+											para aminorar contratiempos y eventualidades. También implementé otras
+											cosas que
+											fui recogiendo en el proceso, como por ejemplo hacer la primer migración
+											con un AbstractUser (leer <a target="_blank"
+												href="https://github.com/soloamilkar/helpdesk/blob/main/account/models.py">account.models.MyUser
+												Docstring</a>).
+											<hr>
+											Pueden leer el
+											README. O pueden leer y clonar el proyecto desde Github.
+											<hr>
+										</p>
+									</div>
+									<div class="tab-pane fade" id="pills-profile" role="tabpanel"
+										aria-labelledby="pills-profile-tab">
+										<p class="mb-0">
+											<table class="table table-bordered">
+												<thead>
+													<th>URLS Públicas</th>
+												</thead>
+												<tbody>
+													<tr>
+														<td><a href="{% url 'helpdesk:index' %}">Index</a></td>
+													</tr>
+													<tr>
+														<td><a href="{% url 'account:login' %}">Entrar</a></td>
+													</tr>
+													<tr>
+														<td><a href="{% url 'account:create' %}">Registrarme</a></td>
+													</tr>
+												</tbody>
+											</table>
+											<table class="table table-bordered">
+												<thead>
+													<th>URLS privadas (Se necesita estar logueado)</th>
+												</thead>
+												<tbody>
+													<tr>
+														<td><a href="{% url 'helpdesk:dashboard' %}">Dashboard</a></td>
+													</tr>
+													<tr>
+														<td><a href="{% url 'account:edit' %}">Editar Cuenta</a></td>
+													</tr>
+													<tr>
+														<td><a href="{% url 'account:rol' %}">Rol de Cuenta</a></td>
+													</tr>
+													<tr>
+														<td><a href="{% url 'helpdesk:new_ticket' %}">Nuevo Ticket</a>
+														</td>
+													</tr>
+													<tr>
+														<td><a href="#">Info del
+																Ticket</a> (Despliega un ticket sólo si eres el dueño o
+															el agente que lo va a trabajar.)</td>
+													</tr>
+													<tr>
+														<td><a href="{% url 'helpdesk:vacation_list' %}">Lista de
+																Vacaciones</a></td>
+													</tr>
+													<tr>
+														<td><a href="{% url 'helpdesk:new_ticket' %}">Petición de
+																Vacaciones</a> (Accedes a ella automáticamente tras
+															crear
+															un ticket con categoría "Vacaciones")</td>
+													</tr>
+													<tr>
+														<td><a href="{% url 'helpdesk:unassigned' %}">Tickets sin
+																asignar</a> (solo disponible para
+															agentes).</td>
+													</tr>
+													<tr>
+														<td><a href="{% url 'account:logout' %}">Logout</a></td>
+													</tr>
+												</tbody>
+											</table>
+										</p>
+									</div>
+									<div class="tab-pane fade" id="pills-contact" role="tabpanel"
+										aria-labelledby="pills-contact-tab">
+										<p class="mb-0">Est quis nulla laborum officia ad nisi ex nostrud culpa
+											Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi
+											elit fugiat commodo sunt reprehenderit laborum veniam eu
+											veniam. Eiusmod
+											minim exercitation fugiat irure ex labore incididunt do fugiat commodo
+											aliquip sit id deserunt reprehenderit aliquip nostrud. Amet ex cupidatat
+											excepteur aute veniam incididunt mollit cupidatat esse
+											irure officia elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit
+											labore ipsum laboris ipsum commodo sunt tempor enim incididunt. Commodo
+											quis sunt dolore aliquip aute tempor irure magna enim
+											minim reprehenderit. Ullamco consectetur culpa veniam sint cillum aliqua
+											incididunt velit ullamco sunt ullamco quis quis commodo voluptate.
+											Mollit nulla nostrud adipisicing aliqua cupidatat aliqua
+											pariatur mollit voluptate voluptate consequat non.</p>
+									</div>
+								</div>
+							</div>
+							<!-- [ sample-page ] end -->
+						</div>
+
+						<!-- [ Main Content ] end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock body %}
