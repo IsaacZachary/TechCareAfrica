@@ -19,23 +19,23 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="feather icon-user"></i></span>
                                 </div>
-                                {% render_field form.username class="form-control" placeholder="Usuario"%}
+                                {% render_field form.username class="form-control" placeholder="Username"%}
                             </div>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="feather icon-lock"></i></span>
                                 </div>
-                                {% render_field form.password class="form-control" placeholder="Contraseña"%}
+                                {% render_field form.password class="form-control" placeholder="Password"%}
                             </div>
                             <input type='submit' class="btn btn-primary mb-4" value="Entrar">
                         </form>
                         {% if form.errors %}
                         <div class="alert alert-danger">
-                            <strong>El usuario y/o la contraseña no hacen match.</strong>
+                            <strong>The username and/or password do not match.</strong>
                         </div>
                         {% endif %}
-                        <p class="mb-2">Aún no tienes una cuenta? <a href="{% url 'account:create' %}"
-                                class="f-w-400">Registrarme</a></p>
+                        <p class="mb-2">Don't have an account yet? <a href="{% url 'account:create' %}"
+                                class="f-w-400">Register</a></p>
                     </div>
                 </div>
                 <div class="col-md-6 d-none d-md-block">
@@ -58,9 +58,9 @@
     </div>
     <div class="fab-hover">
         <ul class="list-unstyled">
-            <li><a href="{% url 'helpdesk:index' %}" data-text="Inicio" class="btn btn-icon btn-rounded btn-info m-0"><i
+            <li><a href="{% url 'helpdesk:index' %}" data-text="Home" class="btn btn-icon btn-rounded btn-info m-0"><i
                         class="feather icon-home"></i></a></li>
-            <li><a href="{% url 'account:create' %}" data-text="Crear cuenta"
+            <li><a href="{% url 'account:create' %}" data-text="Create Account"
                     class="btn btn-icon btn-rounded btn-primary m-0"><i class="feather icon feather icon-user"></i></a>
             </li>
         </ul>

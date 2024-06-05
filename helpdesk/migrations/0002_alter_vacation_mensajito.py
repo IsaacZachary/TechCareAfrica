@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name='vacation',
-            name='mensajito',
-            field=models.CharField(default='Vuelve cuando puedas :)', max_length=300),
+            name='message',
+            field=models.CharField(default='Come back when you can :)', max_length=300),
         ),
     ]

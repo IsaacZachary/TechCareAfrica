@@ -36,7 +36,7 @@
 									<li class="nav-item">
 										<a class="nav-link active" id="pills-home-tab" data-toggle="pill"
 											href="#pills-home" role="tab" aria-controls="pills-home"
-											aria-selected="true">Introducción al proyecto</a>
+											aria-selected="true">Project Introduction</a>
 									</li>
 									<li class="nav-item">
 										<a class="nav-link" id="pills-profile-tab" data-toggle="pill"
@@ -46,29 +46,18 @@
 									<li class="nav-item">
 										<a class="nav-link" id="pills-contact-tab" data-toggle="pill"
 											href="#pills-contact" role="tab" aria-controls="pills-contact"
-											aria-selected="false">Contacto</a>
+											aria-selected="false">Contact</a>
 									</li>
 								</ul>
 								<div class="tab-content" id="pills-tabContent">
 									<div class="tab-pane fade show active" id="pills-home" role="tabpanel"
 										aria-labelledby="pills-home-tab">
 										<p class="mb-0">
-											Mi versión a pequeña escala de un sistema Helpdesk para subir issues por
-											medio de tickets. Este es mi segundo proyecto, y fue muchísimo más
-											"relax" que mi primer proyecto deployed. Aquí desarrollé un sistema
-											simple que trata de asemejar algunas de las principales características
-											de un sistema a escala empresarial. Apliqué muchísimo de lo que aprendí
-											desarrollando mi portfolio website, por ejemplo: estructurar el proyecto
-											desde el principio hasta el final antes de escribir una línea de código
-											para aminorar contratiempos y eventualidades. También implementé otras
-											cosas que
-											fui recogiendo en el proceso, como por ejemplo hacer la primer migración
-											con un AbstractUser (leer <a target="_blank"
+											My scaled-down version of a Helpdesk system for submitting issues via tickets. This is my second project, and it was much more "relaxed" than my first deployed project. Here, I developed a simple system that tries to resemble some of the main features of an enterprise-scale system. I applied a lot of what I learned developing my portfolio website, for example: structuring the project from start to finish before writing a line of code to minimize setbacks and eventualities. I also implemented other things that I picked up along the way, such as making the first migration with an AbstractUser (read <a target="_blank"
 												href="https://github.com/soloamilkar/helpdesk/blob/main/account/models.py">account.models.MyUser
 												Docstring</a>).
 											<hr>
-											Pueden leer el
-											README. O pueden leer y clonar el proyecto desde Github.
+											You can read the README. Or you can read and clone the project from Github.
 											<hr>
 										</p>
 									</div>
@@ -77,57 +66,49 @@
 										<p class="mb-0">
 											<table class="table table-bordered">
 												<thead>
-													<th>URLS Públicas</th>
+													<th>Public URLs</th>
 												</thead>
 												<tbody>
 													<tr>
 														<td><a href="{% url 'helpdesk:index' %}">Index</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'account:login' %}">Entrar</a></td>
+														<td><a href="{% url 'account:login' %}">Login</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'account:create' %}">Registrarme</a></td>
+														<td><a href="{% url 'account:create' %}">Sign Up</a></td>
 													</tr>
 												</tbody>
 											</table>
 											<table class="table table-bordered">
 												<thead>
-													<th>URLS privadas (Se necesita estar logueado)</th>
+													<th>Private URLs (Login Required)</th>
 												</thead>
 												<tbody>
 													<tr>
 														<td><a href="{% url 'helpdesk:dashboard' %}">Dashboard</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'account:edit' %}">Editar Cuenta</a></td>
+														<td><a href="{% url 'account:edit' %}">Edit Account</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'account:rol' %}">Rol de Cuenta</a></td>
+														<td><a href="{% url 'account:rol' %}">Account Role</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'helpdesk:new_ticket' %}">Nuevo Ticket</a>
+														<td><a href="{% url 'helpdesk:new_ticket' %}">New Ticket</a>
 														</td>
 													</tr>
 													<tr>
-														<td><a href="#">Info del
-																Ticket</a> (Despliega un ticket sólo si eres el dueño o
-															el agente que lo va a trabajar.)</td>
+														<td><a href="#">Ticket Info</a> (Displays a ticket only if you are the owner or the agent who will work on it.)</td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'helpdesk:vacation_list' %}">Lista de
-																Vacaciones</a></td>
+														<td><a href="{% url 'helpdesk:vacation_list' %}">Vacation List</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'helpdesk:new_ticket' %}">Petición de
-																Vacaciones</a> (Accedes a ella automáticamente tras
-															crear
-															un ticket con categoría "Vacaciones")</td>
+														<td><a href="{% url 'helpdesk:new_ticket' %}">Vacation Request</a> (You automatically access it after creating a ticket with the "Vacation" category)</td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'helpdesk:unassigned' %}">Tickets sin
-																asignar</a> (solo disponible para
-															agentes).</td>
+														<td><a href="{% url 'helpdesk:unassigned' %}">Unassigned Tickets</a> (only available for agents).</td>
 													</tr>
 													<tr>
 														<td><a href="{% url 'account:logout' %}">Logout</a></td>
@@ -138,20 +119,7 @@
 									</div>
 									<div class="tab-pane fade" id="pills-contact" role="tabpanel"
 										aria-labelledby="pills-contact-tab">
-										<p class="mb-0">Est quis nulla laborum officia ad nisi ex nostrud culpa
-											Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi
-											elit fugiat commodo sunt reprehenderit laborum veniam eu
-											veniam. Eiusmod
-											minim exercitation fugiat irure ex labore incididunt do fugiat commodo
-											aliquip sit id deserunt reprehenderit aliquip nostrud. Amet ex cupidatat
-											excepteur aute veniam incididunt mollit cupidatat esse
-											irure officia elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit
-											labore ipsum laboris ipsum commodo sunt tempor enim incididunt. Commodo
-											quis sunt dolore aliquip aute tempor irure magna enim
-											minim reprehenderit. Ullamco consectetur culpa veniam sint cillum aliqua
-											incididunt velit ullamco sunt ullamco quis quis commodo voluptate.
-											Mollit nulla nostrud adipisicing aliqua cupidatat aliqua
-											pariatur mollit voluptate voluptate consequat non.</p>
+										<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 									</div>
 								</div>
 							</div>
