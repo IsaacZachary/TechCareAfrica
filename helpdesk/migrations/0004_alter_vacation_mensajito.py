@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name='vacation',
-            name='mensajito',
+            name='message',
             field=models.CharField(default='We got your back, {self.owner}! ;)', max_length=300),
         ),
     ]

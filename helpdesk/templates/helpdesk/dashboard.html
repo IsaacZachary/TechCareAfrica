@@ -39,15 +39,14 @@
                                     <div class="card-body">
                                         <div class="row align-items-center m-b-30">
                                             <div class="col">
-                                                <h6 class="m-b-5 text-white">Tickets Totales</h6>
+                                                <h6 class="m-b-5 text-white">Tickets Tickets</h6>
                                                 <h1 class="m-b-0 text-white">{{user.assigned_tickets.count}}</h1>
                                             </div>
                                             <div class="col-auto">
                                                 <i class="fas fa-money-bill-alt text-c-red f-18"></i>
                                             </div>
                                         </div>
-                                        <p><a class="m-b-0 text-white" href="{% url 'helpdesk:unassigned' %}">Tomar
-                                                ticket</a></p>
+                                        <p><a class="m-b-0 text-white" href="{% url 'helpdesk:unassigned' %}">Take Ticket</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -56,14 +55,14 @@
                                     <div class="card-body">
                                         <div class="row align-items-center m-b-30">
                                             <div class="col">
-                                                <h6 class="m-b-5 text-white">Vacaciones Pendientes</h6>
+                                                <h6 class="m-b-5 text-white">Pending Vacations</h6>
                                                 <h1 class="m-b-0 text-white">{{pending_vacations.count}}</h1>
                                             </div>
                                             <div class="col-auto">
                                                 <i class="fas fa-question text-c-green f-18"></i>
                                             </div>
                                         </div>
-                                        <p><a class="m-b-0 text-white" href="">Crear solicitud</a>
+                                        <p><a class="m-b-0 text-white" href="">Create Request</a>
                                         </p>
                                     </div>
                                 </div>
@@ -73,7 +72,7 @@
                                     <div class="card-body">
                                         <div class="row align-items-center m-b-10">
                                             <div class="col">
-                                                <h6 class="m-b-5 text-white">Vacaciones Aprobadas</h6>
+                                                <h6 class="m-b-5 text-white">Approved Vacations</h6>
                                                 <h1 class="m-b-0 text-white">{{approved_vacations.count}}</h1>
                                             </div>
                                             <div class="col-auto">
@@ -81,8 +80,7 @@
                                             </div>
                                         </div>
                                         .
-                                        <p><a class="m-b-0 text-white" href="{% url 'helpdesk:vacation_list' %}">Ver
-                                                vacaciones</a>
+                                        <p><a class="m-b-0 text-white" href="{% url 'helpdesk:vacation_list' %}">View Vacations</a>
                                         </p>
                                     </div>
                                 </div>
@@ -92,19 +90,19 @@
                             <div class="col-xl-8 col-md-6">
                                 <div class="card table-card">
                                     <div class="card-header">
-                                        <h5>Tickets asignados</h5>
+                                        <h5>Assigned Tickets</h5>
                                     </div>
                                     <div class="card-body px-0 py-0">
                                         <div class="table-responsive">
                                             <table class="table table">
                                                 <thead>
                                                     <tr>
-                                                        <th>Ticket code</th>
-                                                        <th>Creado</th>
-                                                        <th>Actualizado</th>
+                                                        <th>Ticket Code</th>
+                                                        <th>Created</th>
+                                                        <th>Updated</th>
                                                         <th>Status</th>
-                                                        <th>Categoría</th>
-                                                        <th>Detalles</th>
+                                                        <th>Category</th>
+                                                        <th>Details</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -129,7 +127,7 @@
                             <div class="col-md-6 col-xl-4">
                                 <div class="card user-card">
                                     <div class="card-header">
-                                        <h5>Cuenta</h5>
+                                        <h5>Account</h5>
                                     </div>
                                     <div class="card-body  text-center">
                                         <div class="usre-image">
@@ -158,13 +156,12 @@
                                         <hr>
                                         <div class="row justify-content-center user-social-link">
                                             {% if user.account.social_links %}
-                                            {% for nombre, link in user.account.social_links.items %}
+                                            {% for name, link in user.account.social_links.items %}
                                             <div class="col-auto"><a href="{{link}}"><i
-                                                        class="fab fa-{{nombre}} text-primary f-22"></i></a></div>
+                                                        class="fab fa-{{name}} text-primary f-22"></i></a></div>
                                             {% endfor %}
                                             {% else %}
-                                            <small>Aquí se desplegarán los íconos de tus redes sociales, una vez los
-                                                agregues.</small>
+                                            <small>Icons of your social networks will be displayed here once you add them.</small>
                                             {% endif %}
                                         </div>
                                     </div>
@@ -197,15 +194,14 @@
                                     <div class="card-body">
                                         <div class="row align-items-center m-b-30">
                                             <div class="col">
-                                                <h6 class="m-b-5 text-white">Tickets Totales</h6>
+                                                <h6 class="m-b-5 text-white">Tickets Totals</h6>
                                                 <h1 class="m-b-0 text-white">{{user.tickets.count}}</h1>
                                             </div>
                                             <div class="col-auto">
                                                 <i class="fas fa-money-bill-alt text-c-red f-18"></i>
                                             </div>
                                         </div>
-                                        <p><a class="m-b-0 text-white" href="{% url 'helpdesk:new_ticket' %}">Crear
-                                                ticket</a></p>
+                                        <p><a class="m-b-0 text-white" href="{% url 'helpdesk:new_ticket' %}">Create Ticket</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -214,14 +210,14 @@
                                     <div class="card-body">
                                         <div class="row align-items-center m-b-30">
                                             <div class="col">
-                                                <h6 class="m-b-5 text-white">Vacaciones Pendientes</h6>
+                                                <h6 class="m-b-5 text-white">Pending Vacations</h6>
                                                 <h1 class="m-b-0 text-white">{{pending_vacations.count}}</h1>
                                             </div>
                                             <div class="col-auto">
                                                 <i class="fas fa-question text-c-green f-18"></i>
                                             </div>
                                         </div>
-                                        <p><a class="m-b-0 text-white" href="">Crear solicitud</a>
+                                        <p><a class="m-b-0 text-white" href="">Create request</a>
                                         </p>
                                     </div>
                                 </div>
@@ -231,7 +227,7 @@
                                     <div class="card-body">
                                         <div class="row align-items-center m-b-10">
                                             <div class="col">
-                                                <h6 class="m-b-5 text-white">Vacaciones Aprobadas</h6>
+                                                <h6 class="m-b-5 text-white">Approved Vacations</h6>
                                                 <h1 class="m-b-0 text-white">{{approved_vacations.count}}</h1>
                                             </div>
                                             <div class="col-auto">
@@ -239,8 +235,7 @@
                                             </div>
                                         </div>
                                         .
-                                        <p><a class="m-b-0 text-white" href="{% url 'helpdesk:vacation_list' %}">Ver
-                                                vacaciones</a>
+                                        <p><a class="m-b-0 text-white" href="{% url 'helpdesk:vacation_list' %}">View vacations</a>
                                         </p>
                                     </div>
                                 </div>
@@ -258,11 +253,11 @@
                                                 <thead>
                                                     <tr>
                                                         <th>Ticket code</th>
-                                                        <th>Creado</th>
-                                                        <th>Actualizado</th>
+                                                        <th>Created</th>
+                                                        <th>Updated</th>
                                                         <th>Status</th>
-                                                        <th>Categoría</th>
-                                                        <th>Detalles</th>
+                                                        <th>Category</th>
+                                                        <th>Details</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -273,7 +268,7 @@
                                                         <td>{{ticket.updated|date:'g:i a'}}</td>
                                                         <td>{{ticket.status.title}}</td>
                                                         <td>{{ticket.category.title}}</td>
-                                                        <td><a href="{{ticket.get_absolute_url}}">Ver</a>
+                                                        <td><a href="{{ticket.get_absolute_url}}">View</a>
                                                         </td>
                                                     </tr>
                                                     {% endfor %}
@@ -287,7 +282,7 @@
                             <div class="col-md-6 col-xl-4">
                                 <div class="card user-card">
                                     <div class="card-header">
-                                        <h5>Cuenta</h5>
+                                        <h5>Account</h5>
                                     </div>
                                     <div class="card-body  text-center">
                                         <div class="usre-image">
@@ -321,8 +316,7 @@
                                                         class="fab fa-{{nombre}} text-primary f-22"></i></a></div>
                                             {% endfor %}
                                             {% else %}
-                                            <small>Aquí se desplegarán los íconos de tus redes sociales, una vez los
-                                                agregues.</small>
+                                            <small>Here will be the icons of your social networks once you add them.</small>
                                             {% endif %}
                                         </div>
                                     </div>

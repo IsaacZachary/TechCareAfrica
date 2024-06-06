@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('helpdesk', '0002_alter_vacation_mensajito'),
+        ('helpdesk', '0002_alter_vacation_message'),
     ]
 
     operations = [
@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='vacation',
-            name='mensajito',
-            field=models.CharField(default='¡Vacaciones! Bien merecidas', max_length=300),
+            name='message',
+            field=models.CharField(default='Vacation! Well deserved', max_length=300),
         ),
     ]

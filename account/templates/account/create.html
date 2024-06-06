@@ -12,34 +12,34 @@
         <div class="col-md-6">
           <div class="card-body">
             <img src="/static/images/helpdesk_logo_horizontal.png" alt="" class="img-fluid mb-4">
-            <h4 class="mb-3 f-w-400">Crear usuario</h4>
+            <h4 class="mb-3 f-w-400">Create User</h4>
             <form method='post'>
               {% csrf_token %}
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="feather icon-user"></i></span>
                 </div>
-                {% render_field form.username class="form-control" placeholder="Usuario" %}
+                {% render_field form.username class="form-control" placeholder="Username" %}
               </div>
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="feather icon-lock"></i></span>
                 </div>
-                {% render_field form.password1 class="form-control" placeholder="Contraseña"%}
+                {% render_field form.password1 class="form-control" placeholder="Password"%}
               </div>
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="feather icon-lock"></i></span>
                 </div>
-                {% render_field form.password2 class="form-control" placeholder="Confirmar contraseña"%}
+                {% render_field form.password2 class="form-control" placeholder="Confirm Password"%}
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="feather icon-user"></i></span>
                 </div>
-                {% render_field form.first_name class="form-control" placeholder="Nombre real"%}
+                {% render_field form.first_name class="form-control" placeholder="Full Name"%}
               </div>
-              <input type='submit' class="btn btn-primary mb-4" value="Registrarme">
+              <input type='submit' class="btn btn-primary mb-4" value="Register">
             </form>
             {% if form.errors %}
             {% for field in form %}
@@ -50,7 +50,7 @@
             {% endfor %}
             {% endfor %}
             {% endif %}
-            <p class="mb-2">Ya tienes una cuenta? <a href="{% url 'account:login' %}" class="f-w-400">Entrar</a></p>
+            <p class="mb-2">Already have an account? <a href="{% url 'account:login' %}" class="f-w-400">Sign In</a></p>
           </div>
         </div>
         <div class="col-md-6 d-none d-md-block">
@@ -73,9 +73,9 @@
   </div>
   <div class="fab-hover">
     <ul class="list-unstyled">
-      <li><a href="{% url 'helpdesk:index' %}" data-text="Inicio" class="btn btn-icon btn-rounded btn-info m-0"><i
+      <li><a href="{% url 'helpdesk:index' %}" data-text="Home" class="btn btn-icon btn-rounded btn-info m-0"><i
             class="feather icon-home"></i></a></li>
-      <li><a href="{% url 'account:login' %}" data-text="Entrar" class="btn btn-icon btn-rounded btn-primary m-0"><i
+      <li><a href="{% url 'account:login' %}" data-text="Sign In" class="btn btn-icon btn-rounded btn-primary m-0"><i
             class="feather icon feather icon-user"></i></a>
       </li>
     </ul>
