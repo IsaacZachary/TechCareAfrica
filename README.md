@@ -24,13 +24,30 @@ ___
 * Clone this repository:
 
 ```
-$ git clone https://github.com/IsaacZachary/TechCareAfrica.git
+git clone https://github.com/IsaacZachary/TechCareAfrica.git
+```
+
+* Activate your virtual environment.
+```
+python -m venv venv
+
+```
+
+```
+source venv/Scripts/activate
+
+```
+
+* Install setup tools.
+```
+pip install setuptools
+
 ```
 
 * Install requirements.txt within your virtual environment.
 
 ```
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 * Run make migrations.
@@ -48,7 +65,7 @@ python manage.py migrate
 * Runserver
 
 ```
-$ python manage.py runserver
+python manage.py runserver
 ```
 
 ## Contributing
