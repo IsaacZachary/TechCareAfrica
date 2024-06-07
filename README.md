@@ -29,6 +29,11 @@ git clone https://github.com/IsaacZachary/TechCareAfrica.git
 
 * Activate your virtual environment.
 ```
+python -m venv venv
+
+```
+
+```
 source venv/Scripts/activate
 
 ```
