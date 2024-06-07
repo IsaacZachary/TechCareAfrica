@@ -39,7 +39,7 @@ AUTH_USER_MODEL = 'account.MyUser'
 # Application definition
 
 INSTALLED_APPS = [
-    'account.apps.AccountConfig',  # Use the custom AppConfig
+    'account.apps.AccountConfig',
     'helpdesk.apps.HelpdeskConfig',
     'widget_tweaks',
     'django.contrib.admin',
@@ -136,5 +136,3 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

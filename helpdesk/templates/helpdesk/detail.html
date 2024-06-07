@@ -31,18 +31,20 @@
                         <!-- [ Main Content ] start -->
                         <div class="row">
                             <div class="col-sm-12">
-                                <h5>Ticket Code: {{ticket.code}}</h5>
+                                <h5>Código del ticket: {{ticket.code}}</h5>
                                 {% if user.rol.is_agent %}
                                 <div class="card ">
                                     <div class="card-header">
-                                        <h5>Ticket Status</h5>
+                                        <h5>Estado del ticket</h5>
                                     </div>
                                     <div class="card-body">
                                         <form action="{% url 'helpdesk:ticket_decision_handling' ticket.code %}"
                                             method='POST'>
                                             {% csrf_token %}
                                             <div class="form-group">
-                                                <label for="formControlRange">Change the ticket status so the user can see that you are working on it, or you have already closed it.</label>
+                                                <label for="formControlRange">Cambia el estado del ticket para que el
+                                                    usuario pueda ver que estás trabajando en él, o ya lo
+                                                    cerraste.</label>
                                                 {% render_field ticket_decision_form.status class="form-control" %}
                                             </div>
                                             <input type="submit" value="Enviar">
@@ -59,7 +61,7 @@
                                             method='POST'>
                                             {% csrf_token %}
                                             <div class="form-group">
-                                                <label for="formControlRange">Decide on the vacation:</label>
+                                                <label for="formControlRange">Decide la vacación:</label>
                                                 {% render_field vacation_decision_form.status class="form-control" %}
                                             </div>
                                             <input type="submit" value="Enviar">
@@ -78,7 +80,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link" id="pills-profile-tab" data-toggle="pill"
                                             href="#pills-profile" role="tab" aria-controls="pills-profile"
-                                            aria-selected="false">Comments</a>
+                                            aria-selected="false">Comentarios</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" id="pills-contact-tab" data-toggle="pill"
@@ -91,41 +93,41 @@
                                         aria-labelledby="pills-home-tab">
                                         <div class="card">
                                             <div class="card-body">
-                                                <h5>General Information</h5>
+                                                <h5>Información General</h5>
                                                 <hr class="mb-5">
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Created</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Creado</span>:
                                                             {{ticket.created}}</h6>
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Updated</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Actualizado</span>:
                                                             {{ticket.updated}}
                                                         </h6>
                                                         <h6 class="mb-5"><span class='text-c-blue'>Status</span>:
                                                             {{ticket.status}}</h6>
                                                         <!-- IF AGENT-->
                                                         {% if ticket.agent %}
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Assigned
-                                                                Agent</span>: {{ticket.agent}}</h6>
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Agente
+                                                                asignado</span>: {{ticket.agent}}</h6>
                                                         {% else %}
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Assigned
-                                                                Agent</span>: Unassigned</h6>
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Agente
+                                                                asignado</span>: Sin asignar</h6>
                                                         {% endif %}
                                                         <!-- ENDIF -->
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Previously
-                                                                Reported?</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Anteriormente
+                                                                reportado?</span>:
                                                             {{ticket.is_escalated}}</h6>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Owner</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Dueño</span>:
                                                             {{ticket.owner}}</h6>
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Department</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Departamento</span>:
                                                             {{ticket.department.title }}
                                                         </h6>
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Category</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Categoría</span>:
                                                             {{ticket.category.title }}</h6>
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Subject</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Propósito</span>:
                                                             {{ticket.subject}}</h6>
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Details</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Detalles</span>:
                                                             {{ticket.description}}</h6>
                                                     </div>
                                                 </div>
@@ -138,7 +140,7 @@
                                         aria-labelledby="pills-profile-tab">
                                         <div class="card">
                                             <div class="card-body">
-                                                <h5>Chat (beta - read more.)</h5>
+                                                <h5>Chat (beta - leer más.)</h5>
                                                 <hr class="mb-5">
                                                 <div class="row">
                                                     <div class="col-md-6">
@@ -149,14 +151,14 @@
                                                                 {% for comment in comments %}
                                                                 <div class="comment_box">
                                                                     <p>{{comment.content}}</p>
-                                                                    <small>Submitted by: {{comment.owner}}
+                                                                    <small>Enviado por: {{comment.owner}}
                                                                         ({{comment.created}})
                                                                     </small>
                                                                     <p></p>
                                                                 </div>
                                                                 {% endfor %}
                                                                 {% else %}
-                                                                This ticket has no comments yet.
+                                                                Este ticket aún no tiene comentarios.
                                                                 {% endif %}
                                                             </div>
                                                         </div>
@@ -167,7 +169,8 @@
                                                             method='POST'>
                                                             {% csrf_token %}
                                                             <div class="form-group">
-                                                                <label for="formControlRange">W:</label>
+                                                                <label for="formControlRange">Escribe un
+                                                                    comentario:</label>
                                                                 {% render_field comment_form.content class="form-control" %}
                                                             </div>
                                                             <input type="submit" value="Enviar">
@@ -185,11 +188,11 @@
                                                 <form method='POST' enctype="multipart/form-data">
                                                     {% csrf_token %}
                                                     <div class="form-group">
-                                                        <label for="formControlRange">Select a file:</label>
+                                                        <label for="formControlRange">Selecciona un archivo:</label>
                                                         {% render_field attachment_form.image class="form-control" %}
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="formControlRange">Description:</label>
+                                                        <label for="formControlRange">Descripción:</label>
                                                         {% render_field attachment_form.description class="form-control" %}
                                                     </div>
                                                     <input class="form-group" type="submit" value="Enviar">
@@ -206,7 +209,7 @@
                                                     </div>
                                                     {% endfor %}
                                                     {% else %}
-                                                    <h3>No attachments</h3>
+                                                    <h3>No hay attachments</h3>
                                                     {% endif %}
                                                 </div>
                                             </div>

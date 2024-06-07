@@ -36,7 +36,7 @@
 									<li class="nav-item">
 										<a class="nav-link active" id="pills-home-tab" data-toggle="pill"
 											href="#pills-home" role="tab" aria-controls="pills-home"
-											aria-selected="true">Project Introduction</a>
+											aria-selected="true">Introducción al proyecto</a>
 									</li>
 									<li class="nav-item">
 										<a class="nav-link" id="pills-profile-tab" data-toggle="pill"
@@ -46,69 +46,84 @@
 									<li class="nav-item">
 										<a class="nav-link" id="pills-contact-tab" data-toggle="pill"
 											href="#pills-contact" role="tab" aria-controls="pills-contact"
-											aria-selected="false">Contact</a>
+											aria-selected="false">Contacto</a>
 									</li>
 								</ul>
 								<div class="tab-content" id="pills-tabContent">
 									<div class="tab-pane fade show active" id="pills-home" role="tabpanel"
 										aria-labelledby="pills-home-tab">
 										<p class="mb-0">
-											My scaled-down version of a Helpdesk system for submitting issues via tickets. This is my second project, and it was much more "relaxed" than my first deployed project. Here, I developed a simple system that tries to resemble some of the main features of an enterprise-scale system. I applied a lot of what I learned developing my portfolio website, for example: structuring the project from start to finish before writing a line of code to minimize setbacks and eventualities. I also implemented other things that I picked up along the way, such as making the first migration with an AbstractUser (read <a target="_blank"
-												href="https://github.com/soloamilkar/helpdesk/blob/main/account/models.py">account.models.MyUser
+											TechCareAfrica introduces a small-scale version of a Helpdesk system designed to streamline issue reporting through tickets. This project marks the second milestone in my development journey, offering a more relaxed experience compared to my initial deployment. Here, I endeavored to create a simplified system that emulates key features of enterprise-scale platforms. 
+											Drawing from the lessons learned while developing my portfolio website, I prioritized meticulous project structuring before diving into code implementation. This strategic approach aimed to minimize setbacks and anticipate potential challenges.<br> <br> Notably, I incorporated techniques such as conducting the initial migration with an AbstractUser model, demonstrating a commitment to best practices and efficient project management.
+											With TechCareAfrica's Helpdesk system, users can effortlessly submit tickets detailing their IT-related concerns, fostering a smoother communication channel for issue resolution. This endeavor reflects a synthesis of acquired knowledge and a dedication to delivering effective solutions tailored to real-world challenges. <br><br>(read <a target="_blank"
+												href="https://github.com/IsaacZachary/TechCareAfrica.git">account.models.MyUser
 												Docstring</a>).
 											<hr>
-											You can read the README. Or you can read and clone the project from Github.
+											Pueden leer el
+											README. O pueden leer y clonar el proyecto desde Github.
 											<hr>
 										</p>
+										<div class="col-sm-12 d-flex justify-content-center">
+											<img src="{% static 'images/1.png' %}" alt="Image 1" style="max-width: 50%; height: 50%;">
+										</div>
+										
 									</div>
 									<div class="tab-pane fade" id="pills-profile" role="tabpanel"
 										aria-labelledby="pills-profile-tab">
 										<p class="mb-0">
 											<table class="table table-bordered">
 												<thead>
-													<th>Public URLs</th>
+													<th>URLS Públicas</th>
 												</thead>
 												<tbody>
 													<tr>
 														<td><a href="{% url 'helpdesk:index' %}">Index</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'account:login' %}">Login</a></td>
+														<td><a href="{% url 'account:login' %}">Entrar</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'account:create' %}">Sign Up</a></td>
+														<td><a href="{% url 'account:create' %}">Registrarme</a></td>
 													</tr>
 												</tbody>
 											</table>
 											<table class="table table-bordered">
 												<thead>
-													<th>Private URLs (Login Required)</th>
+													<th>URLS privadas (Se necesita estar logueado)</th>
 												</thead>
 												<tbody>
 													<tr>
 														<td><a href="{% url 'helpdesk:dashboard' %}">Dashboard</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'account:edit' %}">Edit Account</a></td>
+														<td><a href="{% url 'account:edit' %}">Editar Cuenta</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'account:rol' %}">Account Role</a></td>
+														<td><a href="{% url 'account:rol' %}">Rol de Cuenta</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'helpdesk:new_ticket' %}">New Ticket</a>
+														<td><a href="{% url 'helpdesk:new_ticket' %}">Nuevo Ticket</a>
 														</td>
 													</tr>
 													<tr>
-														<td><a href="#">Ticket Info</a> (Displays a ticket only if you are the owner or the agent who will work on it.)</td>
+														<td><a href="#">Info del
+																Ticket</a> (Despliega un ticket sólo si eres el dueño o
+															el agente que lo va a trabajar.)</td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'helpdesk:vacation_list' %}">Vacation List</a></td>
+														<td><a href="{% url 'helpdesk:vacation_list' %}">Lista de
+																Vacaciones</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'helpdesk:new_ticket' %}">Vacation Request</a> (You automatically access it after creating a ticket with the "Vacation" category)</td>
+														<td><a href="{% url 'helpdesk:new_ticket' %}">Petición de
+																Vacaciones</a> (Accedes a ella automáticamente tras
+															crear
+															un ticket con categoría "Vacaciones")</td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'helpdesk:unassigned' %}">Unassigned Tickets</a> (only available for agents).</td>
+														<td><a href="{% url 'helpdesk:unassigned' %}">Tickets sin
+																asignar</a> (solo disponible para
+															agentes).</td>
 													</tr>
 													<tr>
 														<td><a href="{% url 'account:logout' %}">Logout</a></td>
@@ -119,7 +134,20 @@
 									</div>
 									<div class="tab-pane fade" id="pills-contact" role="tabpanel"
 										aria-labelledby="pills-contact-tab">
-										<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+										<p class="mb-0">Est quis nulla laborum officia ad nisi ex nostrud culpa
+											Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi
+											elit fugiat commodo sunt reprehenderit laborum veniam eu
+											veniam. Eiusmod
+											minim exercitation fugiat irure ex labore incididunt do fugiat commodo
+											aliquip sit id deserunt reprehenderit aliquip nostrud. Amet ex cupidatat
+											excepteur aute veniam incididunt mollit cupidatat esse
+											irure officia elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit
+											labore ipsum laboris ipsum commodo sunt tempor enim incididunt. Commodo
+											quis sunt dolore aliquip aute tempor irure magna enim
+											minim reprehenderit. Ullamco consectetur culpa veniam sint cillum aliqua
+											incididunt velit ullamco sunt ullamco quis quis commodo voluptate.
+											Mollit nulla nostrud adipisicing aliqua cupidatat aliqua
+											pariatur mollit voluptate voluptate consequat non.</p>
 									</div>
 								</div>
 							</div>
