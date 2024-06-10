@@ -18,9 +18,38 @@ An helpdesk system to manage tickets, comments, attachments and vacation (for no
 
 ____
 
-## TechCare Helpdesk Dashboard
-![image](https://user-images.githubusercontent.com/71573508/108613509-5e684300-73b8-11eb-805c-bdb076066dc1.png)
+## TechCare Helpdesk Register
+![image](https://github.com/IsaacZachary/TechCareAfrica/blob/main/media/screenshots/register.PNG)
+___
+____
 
+## TechCare Helpdesk Login
+![image](https://github.com/IsaacZachary/TechCareAfrica/blob/main/media/screenshots/login.PNG)
+___
+____
+
+## TechCare Helpdesk Dashboard
+![image](https://github.com/IsaacZachary/TechCareAfrica/blob/main/media/screenshots/dashboard.PNG)
+___
+____
+
+## TechCare Helpdesk Choose Role
+![image](https://github.com/IsaacZachary/TechCareAfrica/blob/main/media/screenshots/role.PNG)
+___
+____
+
+## TechCare Helpdesk Project Introduction
+![image](https://github.com/IsaacZachary/TechCareAfrica/blob/main/media/screenshots/start.PNG)
+___
+____
+
+## TechCare Helpdesk Project Sitemap
+![image](https://github.com/IsaacZachary/TechCareAfrica/blob/main/media/screenshots/sitemap.PNG)
+___
+____
+
+## TechCare Helpdesk Project Contact
+![image](https://github.com/IsaacZachary/TechCareAfrica/blob/main/media/screenshots/contact.PNG)
 ___
 
 ## Getting Started
