@@ -115,5 +115,5 @@ For inquiries or support assistance, please contact our team lead at isaaczachar
 
 This project is licensed under the [MIT License](LICENSE).
 
-
+![PLP](https://github.com/IsaacZachary/Support_Company_Website/blob/master/assets/img/plp.png)
 
