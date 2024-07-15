@@ -18,9 +18,8 @@
                             <div class="col-sm-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h5>Lista de vacaciones.</h5>
-                                        <span class="d-block m-t-5">En esta lista podrás ver el estado de tus
-                                            vacaciones.</span>
+                                        <h5>Vacation list.</h5>
+                                        <span class="d-block m-t-5">In this list, you can see the status of your vacations.</span>
                                     </div>
                                     <div class="card-body table-border-style">
                                         <div class="table-responsive">
@@ -29,11 +28,11 @@
                                                 <thead>
                                                     <tr>
                                                         <th>Ticket</th>
-                                                        <th>Estado</th>
-                                                        <th>Desde</th>
-                                                        <th>Hasta</th>
-                                                        <th>Agente</th>
-                                                        <th>Mensaje</th>
+                                                        <th>Status</th>
+                                                        <th>From</th>
+                                                        <th>To</th>
+                                                        <th>Agent</th>
+                                                        <th>Message</th>
                                                     </tr>
                                                 </thead>
                                                 {% for vacation in vacations %}
@@ -46,16 +45,14 @@
                                                         {% if vacation.agent %}
                                                         <td>{{vacation.agent.username.title}}</td>
                                                         {% else %}
-                                                        <td>Asignando</td>
+                                                        <td>Assigning</td>
                                                         {% endif %}
                                                         {% if vacation.status == 'approved' %}
                                                         <td>{{vacation.mensajito}}</td>
                                                         {% elif vacation.status == 'pending' %}
-                                                        <td>Estamos trabajando para poder darte una respuesta lo antes
-                                                            posible :)</td>
+                                                        <td>We are working to give you a response as soon as possible :)</td>
                                                         {% elif vacation.status == 'declined' %}
-                                                        <td>Lo lamentamos, {{ticket.owner}}. No pudimos hacer efectiva
-                                                            la solicitud.</td>
+                                                        <td>We're sorry, {{ticket.owner}}. We couldn't process the request.</td>
                                                         {% endif %}
                                                     </tr>
                                                 </tbody>
@@ -63,9 +60,8 @@
                                             </table>
                                             {% else %}
                                             <!-- Si no hay va -->
-                                            <h5>No tienes solicitudes de vacaciones.</h5>
-                                            <p>Crea un tickete con la categoría "Vacaciones" para solicitud una
-                                                vacación: <a href="{% url 'helpdesk:new_ticket' %}">aquí</a>.</p>
+                                            <h5>You have no vacation requests.</h5>
+                                            <p>Create a ticket with the category "Vacations" to request a vacation: <a href="{% url 'helpdesk:new_ticket' %}">here</a>.</p>
                                             {% endif %}
                                         </div>
                                     </div>

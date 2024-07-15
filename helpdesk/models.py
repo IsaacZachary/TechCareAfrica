@@ -26,18 +26,31 @@ class Ticket(models.Model):
     )
 
     CATEGORY_CHOICES = (
-        ('Sala de Reuniones', 'Sala de Reuniones'),
-        ('OT', 'OT'),
-        ('VTO', 'VTO'),
-        ('Vacations', 'Vacaciones'),
-        ('Cita Médica', 'Cita Médica'),
-        ('Cita Aseguradora', 'Cita Aseguradora'),
+        ('Computer', 'Computer'), 
+        ('Printer', 'Printer'),
+        ('Software', 'Software'),
+        ('Vacations', 'Vacations'),
+        ('Peripherals', 'Peripherals'),
+        ('Recovery', 'Recovery'),
+        ('VPN', 'VPN'),
+        ('Network', 'Network'),
+        ('Server', 'Server'),
+        ('Database', 'Database'),
+        ('Collaboration', 'Collaboration'),
+        ('Budgeting', 'Budgeting'),
+        ('Reporting', 'Reporting'),  
+        ('Consultation', 'Consultation'),
     )
 
+    category = models.CharField(max_length=25, choices=CATEGORY_CHOICES)
+
+    def __str__(self):
+        return f"Ticket #{self.pk} - {self.category}"
+
     STATUS_CHOICES = (
-        ('Pending', 'En espera'),
-        ('Ongoing', 'En curso'),
-        ('Closed', 'Cerrado'),
+        ('Pending', 'Pending'),
+        ('Ongoing', 'Ongoing'),
+        ('Closed', 'Closed'),
     )
 
     # Fields que el sistema va a llenar automáticamente.

@@ -31,23 +31,21 @@
                         <!-- [ Main Content ] start -->
                         <div class="row">
                             <div class="col-sm-12">
-                                <h5>Código del ticket: {{ticket.code}}</h5>
+                                <h5>Ticket code: {{ticket.code}}</h5>
                                 {% if user.rol.is_agent %}
                                 <div class="card ">
                                     <div class="card-header">
-                                        <h5>Estado del ticket</h5>
+                                        <h5>Ticket status</h5>
                                     </div>
                                     <div class="card-body">
                                         <form action="{% url 'helpdesk:ticket_decision_handling' ticket.code %}"
                                             method='POST'>
                                             {% csrf_token %}
                                             <div class="form-group">
-                                                <label for="formControlRange">Cambia el estado del ticket para que el
-                                                    usuario pueda ver que estás trabajando en él, o ya lo
-                                                    cerraste.</label>
+                                                <label for="formControlRange">Change the ticket status so the user can see that you're working on it, or that it's already closed.</label>
                                                 {% render_field ticket_decision_form.status class="form-control" %}
                                             </div>
-                                            <input type="submit" value="Enviar">
+                                            <input type="submit" value="submit">
                                         </form>
                                     </div>
                                 </div>
@@ -61,10 +59,10 @@
                                             method='POST'>
                                             {% csrf_token %}
                                             <div class="form-group">
-                                                <label for="formControlRange">Decide la vacación:</label>
+                                                <label for="formControlRange">Decide on vacation:</label>
                                                 {% render_field vacation_decision_form.status class="form-control" %}
                                             </div>
-                                            <input type="submit" value="Enviar">
+                                            <input type="submit" value="submit">
                                         </form>
                                     </div>
                                 </div>
@@ -80,7 +78,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link" id="pills-profile-tab" data-toggle="pill"
                                             href="#pills-profile" role="tab" aria-controls="pills-profile"
-                                            aria-selected="false">Comentarios</a>
+                                            aria-selected="false">Comments</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" id="pills-contact-tab" data-toggle="pill"
@@ -93,41 +91,38 @@
                                         aria-labelledby="pills-home-tab">
                                         <div class="card">
                                             <div class="card-body">
-                                                <h5>Información General</h5>
+                                                <h5>General information</h5>
                                                 <hr class="mb-5">
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Creado</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Created</span>:
                                                             {{ticket.created}}</h6>
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Actualizado</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Updated</span>:
                                                             {{ticket.updated}}
                                                         </h6>
                                                         <h6 class="mb-5"><span class='text-c-blue'>Status</span>:
                                                             {{ticket.status}}</h6>
                                                         <!-- IF AGENT-->
                                                         {% if ticket.agent %}
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Agente
-                                                                asignado</span>: {{ticket.agent}}</h6>
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Assigned agent</span>: {{ticket.agent}}</h6>
                                                         {% else %}
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Agente
-                                                                asignado</span>: Sin asignar</h6>
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Assigned agent</span>: Sin asignar</h6>
                                                         {% endif %}
                                                         <!-- ENDIF -->
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Anteriormente
-                                                                reportado?</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Previously reported?</span>:
                                                             {{ticket.is_escalated}}</h6>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Dueño</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Owner</span>:
                                                             {{ticket.owner}}</h6>
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Departamento</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Department</span>:
                                                             {{ticket.department.title }}
                                                         </h6>
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Categoría</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Category</span>:
                                                             {{ticket.category.title }}</h6>
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Propósito</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Purpose</span>:
                                                             {{ticket.subject}}</h6>
-                                                        <h6 class="mb-5"><span class='text-c-blue'>Detalles</span>:
+                                                        <h6 class="mb-5"><span class='text-c-blue'>Details</span>:
                                                             {{ticket.description}}</h6>
                                                     </div>
                                                 </div>
@@ -140,7 +135,7 @@
                                         aria-labelledby="pills-profile-tab">
                                         <div class="card">
                                             <div class="card-body">
-                                                <h5>Chat (beta - leer más.)</h5>
+                                                <h5>Chat (beta - read more.)</h5>
                                                 <hr class="mb-5">
                                                 <div class="row">
                                                     <div class="col-md-6">
@@ -151,14 +146,14 @@
                                                                 {% for comment in comments %}
                                                                 <div class="comment_box">
                                                                     <p>{{comment.content}}</p>
-                                                                    <small>Enviado por: {{comment.owner}}
+                                                                    <small>Sent by: {{comment.owner}}
                                                                         ({{comment.created}})
                                                                     </small>
                                                                     <p></p>
                                                                 </div>
                                                                 {% endfor %}
                                                                 {% else %}
-                                                                Este ticket aún no tiene comentarios.
+                                                                This ticket does not have any comments yet.
                                                                 {% endif %}
                                                             </div>
                                                         </div>
@@ -169,11 +164,10 @@
                                                             method='POST'>
                                                             {% csrf_token %}
                                                             <div class="form-group">
-                                                                <label for="formControlRange">Escribe un
-                                                                    comentario:</label>
+                                                                <label for="formControlRange">Write a comment:</label>
                                                                 {% render_field comment_form.content class="form-control" %}
                                                             </div>
-                                                            <input type="submit" value="Enviar">
+                                                            <input type="submit" value="submit">
                                                         </form>
                                                     </div>
                                                 </div>
@@ -188,14 +182,14 @@
                                                 <form method='POST' enctype="multipart/form-data">
                                                     {% csrf_token %}
                                                     <div class="form-group">
-                                                        <label for="formControlRange">Selecciona un archivo:</label>
+                                                        <label for="formControlRange">Select a file:</label>
                                                         {% render_field attachment_form.image class="form-control" %}
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="formControlRange">Descripción:</label>
+                                                        <label for="formControlRange">Description:</label>
                                                         {% render_field attachment_form.description class="form-control" %}
                                                     </div>
-                                                    <input class="form-group" type="submit" value="Enviar">
+                                                    <input class="form-group" type="submit" value="submit">
                                                 </form>
                                             </div>
                                             <div class="col-xl-3 col-md-6">
@@ -209,7 +203,7 @@
                                                     </div>
                                                     {% endfor %}
                                                     {% else %}
-                                                    <h3>No hay attachments</h3>
+                                                    <h3>No attachments</h3>
                                                     {% endif %}
                                                 </div>
                                             </div>

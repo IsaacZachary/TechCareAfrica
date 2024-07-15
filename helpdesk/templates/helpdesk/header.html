@@ -35,7 +35,7 @@
                         <ul class="pro-body">
                             <li><a href="{% url 'account:edit' %}" class="dropdown-item"><i
                                         class="feather icon-settings"></i>
-                                    Editar Cuenta</a></li>
+                                    Edit Account</a></li>
                             <li><a href="{% url 'helpdesk:dashboard' %}" class="dropdown-item"><i
                                         class="feather icon-user"></i> Helpdesk</a>
                             </li>
@@ -47,8 +47,8 @@
                     </div>
                 </div>
                 {% else %}
-                <a style="margin-right: 10px" href="{% url 'account:login' %}">Entrar</a>
-                <a href="{% url 'account:create' %}">Registrarme</a>
+                <a style="margin-right: 10px" href="{% url 'account:login' %}">Log In</a>
+                <a href="{% url 'account:create' %}">Register</a>
                 {% endif %}
             </li>
         </ul>

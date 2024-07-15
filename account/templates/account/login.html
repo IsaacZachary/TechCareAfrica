@@ -31,11 +31,11 @@
                         </form>
                         {% if form.errors %}
                         <div class="alert alert-danger">
-                            <strong>El usuario y/o la contraseña no hacen match.</strong>
+                            <strong>The username and/or password do not match.</strong>
                         </div>
                         {% endif %}
-                        <p class="mb-2">Aún no tienes una cuenta? <a href="{% url 'account:create' %}"
-                                class="f-w-400">Registrarme</a></p>
+                        <p class="mb-2">Don't have an account yet? <a href="{% url 'account:create' %}"
+                                class="f-w-400">Register </a></p>
                     </div>
                 </div>
                 <div class="col-md-6 d-none d-md-block">
@@ -58,9 +58,9 @@
     </div>
     <div class="fab-hover">
         <ul class="list-unstyled">
-            <li><a href="{% url 'helpdesk:index' %}" data-text="Inicio" class="btn btn-icon btn-rounded btn-info m-0"><i
+            <li><a href="{% url 'helpdesk:index' %}" data-text="Home" class="btn btn-icon btn-rounded btn-info m-0"><i
                         class="feather icon-home"></i></a></li>
-            <li><a href="{% url 'account:create' %}" data-text="Crear cuenta"
+            <li><a href="{% url 'account:create' %}" data-text="Create account"
                     class="btn btn-icon btn-rounded btn-primary m-0"><i class="feather icon feather icon-user"></i></a>
             </li>
         </ul>

@@ -2084,6 +2084,8 @@ pre[class*=language-]:before {
     line-height: 60px;
     display: inline-block;
     padding: 0 12px;
+    height: 50px;
+    width: 120px;
 }
 
 .pcoded-header .navbar-nav>li .nav-link {

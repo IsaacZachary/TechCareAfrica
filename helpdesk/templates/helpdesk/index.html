@@ -36,7 +36,7 @@
 									<li class="nav-item">
 										<a class="nav-link active" id="pills-home-tab" data-toggle="pill"
 											href="#pills-home" role="tab" aria-controls="pills-home"
-											aria-selected="true">Introducción al proyecto</a>
+											aria-selected="true">Project introduction</a>
 									</li>
 									<li class="nav-item">
 										<a class="nav-link" id="pills-profile-tab" data-toggle="pill"
@@ -46,7 +46,7 @@
 									<li class="nav-item">
 										<a class="nav-link" id="pills-contact-tab" data-toggle="pill"
 											href="#pills-contact" role="tab" aria-controls="pills-contact"
-											aria-selected="false">Contacto</a>
+											aria-selected="false">Contact</a>
 									</li>
 								</ul>
 								<div class="tab-content" id="pills-tabContent">
@@ -59,8 +59,7 @@
 												href="https://github.com/IsaacZachary/TechCareAfrica.git">account.models.MyUser
 												Docstring</a>).
 											<hr>
-											Pueden leer el
-											README. O pueden leer y clonar el proyecto desde Github.
+											You can read the README. Or you can read and clone the project from Github.
 											<hr>
 										</p>
 										<div class="col-sm-12 d-flex justify-content-center">
@@ -73,57 +72,49 @@
 										<p class="mb-0">
 											<table class="table table-bordered">
 												<thead>
-													<th>URLS Públicas</th>
+													<th> Public URLs</th>
 												</thead>
 												<tbody>
 													<tr>
 														<td><a href="{% url 'helpdesk:index' %}">Index</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'account:login' %}">Entrar</a></td>
+														<td><a href="{% url 'account:login' %}">Log In</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'account:create' %}">Registrarme</a></td>
+														<td><a href="{% url 'account:create' %}">Register</a></td>
 													</tr>
 												</tbody>
 											</table>
 											<table class="table table-bordered">
 												<thead>
-													<th>URLS privadas (Se necesita estar logueado)</th>
+													<th>Private URLs (Login required)</th>
 												</thead>
 												<tbody>
 													<tr>
 														<td><a href="{% url 'helpdesk:dashboard' %}">Dashboard</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'account:edit' %}">Editar Cuenta</a></td>
+														<td><a href="{% url 'account:edit' %}">Edit Account</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'account:rol' %}">Rol de Cuenta</a></td>
+														<td><a href="{% url 'account:rol' %}">Account Role</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'helpdesk:new_ticket' %}">Nuevo Ticket</a>
+														<td><a href="{% url 'helpdesk:new_ticket' %}">New Ticket</a>
 														</td>
 													</tr>
 													<tr>
-														<td><a href="#">Info del
-																Ticket</a> (Despliega un ticket sólo si eres el dueño o
-															el agente que lo va a trabajar.)</td>
+														<td><a href="#">Ticket Info</a> (Displays a ticket only if you are the owner or the agent assigned to work on it.)</td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'helpdesk:vacation_list' %}">Lista de
-																Vacaciones</a></td>
+														<td><a href="{% url 'helpdesk:vacation_list' %}">Vacation List</a></td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'helpdesk:new_ticket' %}">Petición de
-																Vacaciones</a> (Accedes a ella automáticamente tras
-															crear
-															un ticket con categoría "Vacaciones")</td>
+														<td><a href="{% url 'helpdesk:new_ticket' %}">Vacation Request </a> (Accessed automatically after creating a ticket with the category "Vacations")</td>
 													</tr>
 													<tr>
-														<td><a href="{% url 'helpdesk:unassigned' %}">Tickets sin
-																asignar</a> (solo disponible para
-															agentes).</td>
+														<td><a href="{% url 'helpdesk:unassigned' %}">Unassigned Tickets</a> (available only for agents).</td>
 													</tr>
 													<tr>
 														<td><a href="{% url 'account:logout' %}">Logout</a></td>

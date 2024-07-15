@@ -24,35 +24,34 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h3>Abrir ticket</h3>
+                    <h3>Open ticket</h3>
                 </div>
                 <div class="card-body">
                     <div class="col-md-6">
                         <form method="post">
                             {% csrf_token %}
                             <div class="form-group">
-                                <label>Mi departamento:</label>
+                                <label>My department:</label>
                                 {% render_field form.department class="form-control" %}
                             </div>
                             <div class="form-group">
-                                <label for="">Categoría:</label>
+                                <label for="">Category:</label>
                                 {% render_field form.category class="form-control"%}
                             </div>
                             <div class="form-group">
-                                <label for="">Ya fue escalado?</label>
+                                <label for="">Has it already been escalated?</label>
                                 {% render_field form.is_escalated class=""%}
-                                <small id="emailHelp" class="form-text text-muted">Marca esta casilla solamente si este
-                                    issue ya fue reportado previamente.</small>
+                                <small id="emailHelp" class="form-text text-muted">Check this box only if this issue has already been reported previously.</small>
                             </div>
                             <div class="form-group">
                                 <label for="">Subject</label>
                                 {% render_field form.subject class="form-control"%}
                             </div>
                             <div class="form-group">
-                                <label for="">Descripción</label>
+                                <label for="">Description</label>
                                 {% render_field form.description class="form-control"%}
                             </div>
-                            <input type="submit" value="Enviar">
+                            <input type="submit" value="submit">
                         </form>
                     </div>
                 </div>

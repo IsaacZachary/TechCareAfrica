@@ -21,9 +21,8 @@
                             <div class="col-sm-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h5>Tickets sin asignar</h5>
-                                        <span class="d-block m-t-5">En esta lista podrás ver todos los tickets que no
-                                            han sido atendidos por un agente.</span>
+                                        <h5> Unassigned tickets</h5>
+                                        <span class="d-block m-t-5"> In this list, you can see all the tickets that have not been attended to by an agent.</span>
                                     </div>
                                     <div class="card-body table-border-style">
                                         <div class="table-responsive">
@@ -33,10 +32,10 @@
                                                     <tr>
                                                         <th>Code</th>
                                                         <th>Owner</th>
-                                                        <th>Estado</th>
-                                                        <th>Categoría</th>
-                                                        <th>Agente</th>
-                                                        <th>Asignar</th>
+                                                        <th>Status</th>
+                                                        <th>Category</th>
+                                                        <th>Agent</th>
+                                                        <th>Assign</th>
                                                     </tr>
                                                 </thead>
                                                 {% for ticket in tickets %}
@@ -47,8 +46,7 @@
                                                         <td>{{ticket.status.title}}</td>
                                                         <td>{{ticket.category}}</td>
                                                         <td>{{ticket.agent}}</td>
-                                                        <td><a href="{% url 'helpdesk:take_ticket' ticket.code %}">Tomar
-                                                                ticket</a>
+                                                        <td><a href="{% url 'helpdesk:take_ticket' ticket.code %}">Take Ticket</a>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -56,8 +54,8 @@
                                             </table>
                                             {% else %}
                                             <!-- Si no hay va -->
-                                            <h5>Todos los tickets están asignados.</h5>
-                                            <p>Refresca la página :)</a></p>
+                                            <h5> All tickets are assigned.</h5>
+                                            <p>Refresh the page :)</a></p>
                                             {% endif %}
                                         </div>
                                     </div>
